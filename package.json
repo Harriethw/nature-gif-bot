@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "start": "ts-node ./NatureGifBot.ts",
     "dev": "ts-node-dev ./NatureGifBot.ts",
