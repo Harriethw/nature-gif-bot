@@ -15,7 +15,7 @@ bot.on("message", async (ctx) => {
     }`,
   );
 
-  await ctx.replyWithAnimation(`http://github.com/Harriethw/nature-gif-bot/blob/main/gifs/gif_${randomIntFromInterval(1,6)}.gif?raw=true`)
+  await ctx.replyWithAnimation(`http://github.com/Harriethw/nature-gif-bot/blob/main/gifs/gif_${randomIntFromInterval(1,7)}.gif?raw=true`)
   await ctx.reply("Would you like another GIF? Reply to this message")
 });
 
