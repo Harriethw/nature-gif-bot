@@ -1,6 +1,7 @@
 import { Bot, InlineKeyboard } from "grammy";
 import * as dotenv from 'dotenv'
 import { randomIntFromInterval } from "./utils";
+import { locations } from "./locations";
 dotenv.config()
 
 //Create a new bot
@@ -15,8 +16,11 @@ bot.on("message", async (ctx) => {
     }`,
   );
 
-  await ctx.replyWithAnimation(`http://github.com/Harriethw/nature-gif-bot/blob/main/gifs/gif_${randomIntFromInterval(1,8)}.gif?raw=true`)
-  await ctx.reply("Would you like another GIF? Reply to this message")
+  const gifIndex = randomIntFromInterval(1,8)
+
+  await ctx.replyWithLocation(locations[gifIndex][0],locations[gifIndex][1])
+  await ctx.replyWithAnimation(`http://github.com/Harriethw/nature-gif-bot/blob/main/gifs/gif_${gifIndex}.gif?raw=true`)
+  await ctx.reply("Reply to this message for more nature GIFs in your area.")
 });
 
 //Start the Bot
