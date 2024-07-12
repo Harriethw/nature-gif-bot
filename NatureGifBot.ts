@@ -16,7 +16,7 @@ bot.on("message", async (ctx) => {
     }`,
   );
 
-  const gifIndex = randomIntFromInterval(1,8)
+  const gifIndex = randomIntFromInterval(0,7)
 
   await ctx.replyWithLocation(locations[gifIndex][0],locations[gifIndex][1])
   await ctx.replyWithAnimation(`http://github.com/Harriethw/nature-gif-bot/blob/main/gifs/gif_${gifIndex}.gif?raw=true`)
